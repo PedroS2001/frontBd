@@ -1,22 +1,23 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/services/http.service';
 
 @Component({
-  selector: 'app-clientes',
-  templateUrl: './clientes.component.html',
-  styleUrls: ['./clientes.component.css']
+  selector: 'app-tickets',
+  templateUrl: './tickets.component.html',
+  styleUrls: ['./tickets.component.css']
 })
-export class ClientesComponent implements OnInit {
+export class TicketsComponent implements OnInit {
 
-  consulta: any;
+  consulta:any;
   cantidad!:number;
   constructor(private http: HttpService) { }
 
   ngOnInit(): void {
   }
 
+  
   Consulta(endpoint: string) {
-    this.http.consultaClientes(endpoint).subscribe((datosRetornados: any) => {
+    this.http.consultaTickets(endpoint).subscribe((datosRetornados: any) => {
       console.log(datosRetornados);
 
       this.cantidad = 0;

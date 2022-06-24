@@ -1,8 +1,24 @@
 <p #pepe>clientes works!</p>
 
-<button type="button" class="btn btn-primary">Pedro</button>
+<button type="button" class="btn btn-primary" (click)="Consulta('cantidadTickets')" >Cantidad de tickets</button> 
+<br>
+<button type="button" class="btn btn-primary" (click)="Consulta('nonormal')">Clientes que no tienen plan normal</button>
+<br>
+<button type="button" class="btn btn-primary" (click)="Consulta('canalesaire')">Clientes que tienen todos los canales de aire</button>
+<br>
+<button type="button" class="btn btn-primary" (click)="Consulta('barrio')">De que barrio es un cliente</button>
+<br>
+<button type="button" class="btn btn-primary" (click)="Consulta('clienteslocalidad')">Todos los clientes y su localidad</button>
+<br>
 
-<button id="buton" (click)="juancito()">Cantidad de tickets de cada cliente</button>
 
-<button>Todos los clientes que no tienen plan normal</button>
-
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div *ngIf="cantidad>0">Cantidad de elementos: {{cantidad}}</div>
+            <pre>
+                {{consulta}}
+            </pre>
+        </div>
+    </div>
+</div>

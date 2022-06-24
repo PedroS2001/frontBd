@@ -1,0 +1,19 @@
+<button (click)="Consulta('tickets')">Cantidad de tickets de cada empleado</button>
+<br>
+<button (click)="Consulta('mastickets')">El empleado que atendio mas tickets</button>
+<br>
+<button (click)="Consulta('tecnicos')">Todos los empleados que son tecnicos </button>
+<br>
+<button (click)="Consulta('tecnicoscerca')">Si hay algun tecnico cerca de un cliente que quiere devolver el
+    producto</button>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div *ngIf="cantidad>0">Cantidad de elementos: {{cantidad}}</div>
+            <pre>
+                {{consulta}}
+            </pre>
+        </div>
+    </div>
+</div>

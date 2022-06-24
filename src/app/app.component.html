@@ -7,9 +7,9 @@
         <button type="button" (click)="clickTema(1)" [ngClass]="{seleccionada: mostrarCliente}"
           class="btn btn-primary">Clientes</button>
         <button type="button" (click)="clickTema(2)" [ngClass]="{seleccionada: mostrarAtencion}"
-          class="btn btn-primary">Atencion</button>
+          class="btn btn-primary">Empleados</button>
         <button type="button" (click)="clickTema(3)" [ngClass]="{seleccionada: mostrarIncidentes}"
-          class="btn btn-primary">Incidentes</button>
+          class="btn btn-primary">Tickets</button>
       </div>
     </div>
   </div>
@@ -24,18 +24,17 @@
     </div>
 
     <div *ngIf="mostrarAtencion" class="col">
-      <app-atencion></app-atencion>
+      <app-empleados></app-empleados>
     </div>
 
     <div *ngIf="mostrarIncidentes" class="col">
-      <app-incidentes></app-incidentes>
+      <app-tickets></app-tickets>
 
     </div>
   </div>
 
   <div class="row mt-5">
     <div class="col">
-      <app-ticket></app-ticket>
     </div>
   </div>
 

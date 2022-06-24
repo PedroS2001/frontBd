@@ -1,12 +1,12 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/services/http.service';
 
 @Component({
-  selector: 'app-clientes',
-  templateUrl: './clientes.component.html',
-  styleUrls: ['./clientes.component.css']
+  selector: 'app-empleados',
+  templateUrl: './empleados.component.html',
+  styleUrls: ['./empleados.component.css']
 })
-export class ClientesComponent implements OnInit {
+export class EmpleadosComponent implements OnInit {
 
   consulta: any;
   cantidad!:number;
@@ -16,7 +16,7 @@ export class ClientesComponent implements OnInit {
   }
 
   Consulta(endpoint: string) {
-    this.http.consultaClientes(endpoint).subscribe((datosRetornados: any) => {
+    this.http.consultaEmpleados(endpoint).subscribe((datosRetornados: any) => {
       console.log(datosRetornados);
 
       this.cantidad = 0;
@@ -30,5 +30,4 @@ export class ClientesComponent implements OnInit {
       this.consulta = JSON.stringify(datosRetornados,undefined, 2);
     })
   }
-  
 }
