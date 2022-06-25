@@ -1,17 +1,26 @@
+<button type="button" class="btn btn-primary botoncito" (click)="Consulta('cantidadTickets')">
+    Todos los clientes y la cantidad de tickets hechos
+</button>
 
-<button type="button" class="btn btn-primary botoncito" (click)="Consulta('cantidadTickets')" >Cantidad de tickets</button> 
-<br>
-<button type="button" class="btn btn-primary botoncito" (click)="Consulta('nonormal')">Clientes que no tienen plan normal</button>
-<br>
-<button type="button" class="btn btn-primary botoncito" (click)="Consulta('canalesaire')">Clientes que tienen todos los canales de aire</button>
-<br>
-<button type="button" class="btn btn-primary botoncito" (click)="Consulta('barrio')">De que barrio es un cliente</button>
-<br>
-<button type="button" class="btn btn-primary botoncito" (click)="Consulta('clienteslocalidad')">Todos los clientes y su localidad</button>
-<br>
+<button type="button" class="btn btn-primary botoncito" (click)="Consulta('nonormal')">
+    Clientes que no tienen plan normal
+</button>
+
+<button type="button" class="btn btn-primary botoncito" (click)="Consulta('canalesaire')">
+    Clientes que tienen todos los canales de aire
+</button>
+
+<button type="button" class="btn btn-primary botoncito" (click)="Consulta('barrio')">
+    De que barrio es un cliente
+</button>
+
+<button type="button" class="btn btn-primary botoncito" (click)="Consulta('clienteslocalidad')">
+    Todos los clientes y su respectiva localidad
+</button>
 
 
-<div class="container">
+
+<div class="container"  style="border: solid 1px black; margin-top: 5%;">
     <div class="row">
         <div class="col">
             <div *ngIf="cantidad>0">Cantidad de elementos: {{cantidad}}</div>

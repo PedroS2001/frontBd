@@ -9,6 +9,7 @@ import { HttpService } from 'src/app/services/http.service';
 export class TicketsComponent implements OnInit {
 
   consulta:any;
+  buscar:boolean = true ;
   cantidad!:number;
   constructor(private http: HttpService) { }
 
@@ -31,5 +32,19 @@ export class TicketsComponent implements OnInit {
       this.consulta = JSON.stringify(datosRetornados,undefined, 2);
     })
   }
+
+
+  toggleBuscar(){
+    this.buscar ? this.buscar=false : this.buscar=true;
+  }
   
+  Buscar(){
+    let busqueda: string = (<HTMLInputElement> document.getElementById('txtBuscar')).value;
+
+    this.Consulta('buscar/'+busqueda);
+    console.log(busqueda);
+  }
+
+
+
 }

@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'appbd';
 
-  mostrarCliente: boolean = true;
+  mostrarCliente: boolean = false;
   mostrarEmpleados: boolean = false;
-  mostrarTickets: boolean = false;
+  mostrarTickets: boolean = true;
 
   clickTema(numero: number) {
     console.log(numero);
