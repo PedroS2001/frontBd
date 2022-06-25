@@ -9,8 +9,8 @@ export class AppComponent {
   title = 'appbd';
 
   mostrarCliente: boolean = true;
-  mostrarAtencion: boolean = false;
-  mostrarIncidentes: boolean = false;
+  mostrarEmpleados: boolean = false;
+  mostrarTickets: boolean = false;
 
   clickTema(numero: number) {
     console.log(numero);
@@ -18,24 +18,22 @@ export class AppComponent {
     switch (numero) {
       case 1:
         this.mostrarCliente = true;
-        this.mostrarAtencion = false;
-        this.mostrarIncidentes = false;
+        this.mostrarEmpleados = false;
+        this.mostrarTickets = false;
         break;
 
       case 2:
         this.mostrarCliente = false;
-        this.mostrarAtencion = true;
-        this.mostrarIncidentes = false;
+        this.mostrarEmpleados = true;
+        this.mostrarTickets = false;
         break;
 
       case 3:
         this.mostrarCliente = false;
-        this.mostrarAtencion = false;
-        this.mostrarIncidentes = true;
+        this.mostrarEmpleados = false;
+        this.mostrarTickets = true;
         break;
     }
-
-
 
 
   }

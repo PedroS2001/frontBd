@@ -1,41 +1,40 @@
 <div class="container">
 
-
   <div class="row">
     <div class="col">
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" (click)="clickTema(1)" [ngClass]="{seleccionada: mostrarCliente}"
-          class="btn btn-primary">Clientes</button>
-        <button type="button" (click)="clickTema(2)" [ngClass]="{seleccionada: mostrarAtencion}"
-          class="btn btn-primary">Empleados</button>
-        <button type="button" (click)="clickTema(3)" [ngClass]="{seleccionada: mostrarIncidentes}"
-          class="btn btn-primary">Tickets</button>
+
+      <div class="btn-group lg" style="width: 100%;" role="group" aria-label="Basic example">
+
+        <button type="button" (click)="clickTema(1)" [ngClass]="{'btn-secondary': mostrarCliente}"
+          class="btn btn-primary btn-lg">Clientes</button>
+
+        <button type="button" (click)="clickTema(2)" [ngClass]="{'btn-secondary': mostrarEmpleados}"
+          class="btn btn-primary btn-lg">Empleados</button>
+
+        <button type="button" (click)="clickTema(3)" [ngClass]="{'btn-secondary': mostrarTickets}"
+          class="btn btn-primary btn-lg">Tickets</button>
       </div>
+
     </div>
   </div>
 </div>
 
 
-<div class="container">
+<div class="container mt-5 ">
   <div class="row">
 
-    <div *ngIf="mostrarCliente" class="col">
+    <div *ngIf="mostrarCliente" class="container">
       <app-clientes></app-clientes>
     </div>
 
-    <div *ngIf="mostrarAtencion" class="col">
+    <div *ngIf="mostrarEmpleados" class="container">
       <app-empleados></app-empleados>
     </div>
 
-    <div *ngIf="mostrarIncidentes" class="col">
+    <div *ngIf="mostrarTickets" class="col">
       <app-tickets></app-tickets>
-
     </div>
-  </div>
 
-  <div class="row mt-5">
-    <div class="col">
-    </div>
   </div>
 
 </div>
