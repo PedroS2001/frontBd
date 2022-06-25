@@ -9,7 +9,7 @@ export class HttpService {
   constructor(private http: HttpClient) { }
 
   urlClientes:string = "https://backendticketera.herokuapp.com/clientes/";
-  urlEmpleados:string = "https://backendticketera.herokuapp.com//empleados/";
+  urlEmpleados:string = "https://backendticketera.herokuapp.com/empleados/";
   urlTickets:string = "https://backendticketera.herokuapp.com/tickets/";
 
   consultaClientes(endpoint:string)  
