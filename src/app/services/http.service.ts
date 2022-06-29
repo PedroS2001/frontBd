@@ -8,9 +8,12 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 
-  urlClientes:string = "http://localhost:8080/clientes/";
-  urlEmpleados:string = "http://localhost:8080/empleados/";
-  urlTickets:string = "http://localhost:8080/tickets/";
+  // urlClientes:string = "http://localhost:8080/clientes/";
+  // urlEmpleados:string = "http://localhost:8080/empleados/";
+  // urlTickets:string = "http://localhost:8080/tickets/";
+  urlClientes:string = "https://backendticketera.herokuapp.com/clientes/";
+  urlEmpleados:string = "https://backendticketera.herokuapp.com/empleados/";
+  urlTickets:string = "https://backendticketera.herokuapp.com/tickets/";
 
   consultaClientes(endpoint:string)  
   {
